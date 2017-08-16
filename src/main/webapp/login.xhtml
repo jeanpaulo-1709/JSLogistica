@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/signin.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round"
+		rel="stylesheet"></link>
+	<title>Área de login</title>
+
+</h:head>
+
+
+
+<h:body>
+	<div class="container" style="margin-left: 43%;">
+	<h:form class="form-signin">
+
+			<div id="caixaLogin">
+				<p:growl id="msg" showDetail="true" life="4000" />
+
+				<img id="logo" src="icones/logo_js_red.png" />
+				<p:inputText styleClass="log" id="inputLogin" value="#{autenticadorBean.login}" placeholder="Usuário"></p:inputText>
+				<p:password styleClass="log" id="inputSenha"  value="#{autenticadorBean.senha}" placeholder="Senha"></p:password>
+
+				<p:commandButton  ajax="false" id="btnLogar" value="Logar" style="width:315px; heigth: 20px;" action="#{autenticadorBean.autentica}"></p:commandButton>
+			</div>
+
+		</h:form>
+	</div>
+
+
+</h:body>
+</html>

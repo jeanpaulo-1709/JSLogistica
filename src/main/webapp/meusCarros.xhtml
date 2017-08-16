@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<ui:insert name="head">
+		<ui:include src="templateHeader.xhtml" />
+	</ui:insert>
+</h:head>
+
+<body>
+	<div id="menu">
+		<ui:insert name="menu">
+			<ui:include src="templateMenu.xhtml" />
+		</ui:insert>
+	</div>
+
+	<div id="pagina" class="container-fluid" style="margin-top: 30px;">
+		<div class="row">
+
+			<div class="col-sm-12 col-sm-offset-3 col-md-15 col-md-offset-0 main">
+				<h1 class="page-header" style="text-align: center;">Criar essa página</h1>
+
+				<!-- CONTEÚDO DA PÁGINA AQUI -->
+
+			</div>
+		</div>
+	</div>
+
+
+	<ui:insert name="menu">
+		<ui:include src="templateInclude.xhtml" />
+	</ui:insert>
+</body>
+</html>

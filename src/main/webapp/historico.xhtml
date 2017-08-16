@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<ui:insert name="head">
+		<ui:include src="templateHeader.xhtml" />
+	</ui:insert>
+
+</h:head>
+
+<body>
+	<div id="menu">
+		<ui:insert name="menu">
+			<ui:include src="templateMenu.xhtml" />
+		</ui:insert>
+	</div>
+
+	<div id="pagina" class="container-fluid" style="margin-top: 30px;">
+		<div class="row">
+
+			<div class="col-sm-12 col-sm-offset-3 col-md-15 col-md-offset-0 main">
+				<h1 class="page-header" style="text-align: center;">Historico</h1>
+
+				<!-- CONTEÚDO DA PÁGINA AQUI -->
+				
+					<div class="row placeholders">
+					<div class="col-xs-6 col-sm-3 placeholder">
+						<img class="iimg" src="icones/classic.jpg" width="200"
+							height="200" />
+						<h4>Corsa Classic</h4>
+						<span class="text-muted">KZW-0101</span>
+					</div>
+
+					<div class="col-xs-6 col-sm-3 placeholder">
+						<img class="iimg" src="icones/chr.jpg" width="200" height="200" />
+						<h4>C-HR</h4>
+						<span class="text-muted">GTU-0202</span>
+					</div>
+
+					<div class="col-xs-6 col-sm-3 placeholder">
+						<img class="iimg" src="icones/bmw.jpg" width="200" height="200" />
+						<h4>BMW</h4>
+						<span class="text-muted">GTY-0303</span>
+					</div>
+					<div class="col-xs-6 col-sm-3 placeholder">
+						<img class="iimg" src="icones/hrv.jpg" width="200" height="200" />
+						<h4>H-RV</h4>
+						<span class="text-muted">VBT-0404</span>
+					</div>
+				</div>
+
+
+			<h:form>
+			    <p:dataTable var="historico" value="#{historicoMB.getHistorico()}" rows="10"
+			                         paginator="true"
+			                         rowsPerPageTemplate="10">
+			                         
+			        <p:column headerText="Carro">
+			            <h:outputText value="#{historico.idCarro}" />
+			        </p:column>
+			 
+			        <p:column headerText="Endereço">
+			            <h:outputText value="#{historico.endereco}" />
+			        </p:column>
+			 
+			        <p:column headerText="KM/h">
+			            <h:outputText value="#{historico.km}" />
+			        </p:column>
+			 
+			        <p:column headerText="Data/Hora">
+			            <h:outputText value="#{historico.datahora}" />
+			        </p:column>
+			    </p:dataTable>
+			</h:form>
+				
+				<!-- FIM CONTEÚDO DA PÁGINA AQUI -->
+			</div>
+		</div>
+	</div>
+	
+
+	<ui:insert name="menu">
+		<ui:include src="templateInclude.xhtml" />
+	</ui:insert>
+</body>
+</html>

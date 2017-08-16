@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	>
+
+<h:head>
+
+</h:head>
+
+<body>
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only"></span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<img src="icones/logo_js_black.jpg"
+					style="width: 50px; height: 50px; margin-left: 1px" /><span
+					style="color: white; margin-left: 6px;">JS LOGÍSTICA</span>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<h:form><ul class="nav navbar-nav navbar-right">
+					
+					<li><h:commandLink action="#{ClienteMB.irParaHome()}" value="Página Inicial">
+					<h:graphicImage value="icones/home.png" width="20px;" height="20px;" style="margin-left:10px; margin-top:-4px" />
+					</h:commandLink>
+					</li>
+
+					<li><h:commandLink action="#{ClienteMB.irParaMapa()}" value="Mapa em Tempo Real">
+					<h:graphicImage value="icones/map.png" width="20px" height="20px" style="margin-left:10px; margin-top:-4px" />
+					</h:commandLink>
+					</li>
+
+					<li><h:commandLink action="#{ClienteMB.irParaHistorico()}" value="Histórico de Posições">
+					<h:graphicImage value="icones/historico.png" width="20px" height="20px" style="margin-left:10px; margin-top:-4px" />
+					</h:commandLink>
+					</li>
+					
+					<!-- <li><h:commandLink action="#{ClienteMB.irParaMeusCarros()}" value="Meus Carros">
+					<h:graphicImage value="icones/car.png" width="20px" height="20px" style="margin-left:10px; margin-top:-4px" />
+					</h:commandLink>
+					</li> -->
+					
+					<li><h:commandLink action="#{minhaContaMB.irParaMinhaConta()}" value="Minha Conta">
+					<h:graphicImage value="icones/conta.png" width="20px" height="20px" style="margin-left:10px; margin-top:-4px" />
+					</h:commandLink>
+					</li>
+					 
+					<li><h:commandLink action="#{autenticadorBean.registraSaida}" value="Sair">
+					<h:graphicImage value="icones/exit.png" width="20px" height="20px" style="margin-left:10px; margin-top:-4px" />
+					</h:commandLink>
+					</li>
+				</ul>
+				</h:form>
+
+			</div>
+		</div>
+		</nav>
+	
+
+</body>
+
+</html>

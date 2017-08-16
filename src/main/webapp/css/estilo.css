@@ -1,0 +1,40 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color: #eeeeee;
+}
+#caixaLogin{
+	background-color: #eeeeee;
+	width: 300px;
+	height: 295px;
+	position:relative;
+
+}
+
+.log{
+	width: 287px;
+	padding:13px;
+	font-family: 'Varela Round', sans-serif;
+	text-align: center;
+	font-size: 15px;
+}
+
+
+.btnLogin{
+	width: 316px;
+	margin-top:3px;
+	font-family: 'Varela Round', sans-serif;
+	padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+	
+	
+	
+	
+}
+

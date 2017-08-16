@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<ui:insert name="head">
+		<ui:include src="templateHeader.xhtml" />
+	</ui:insert>
+</h:head>
+
+<body>
+	<div id="menu">
+		<ui:insert name="menu">
+			<ui:include src="templateMenu.xhtml" />
+		</ui:insert>
+	</div>
+
+	<div id="pagina" class="container-fluid" style="margin-top: 30px;">
+		<div class="row">
+
+			<div class="col-sm-12 col-sm-offset-3 col-md-15 col-md-offset-0 main">
+				<h1 class="page-header" style="text-align: center;">Minha Conta</h1>
+
+				<!-- CONTEÚDO DA PÁGINA AQUI -->
+
+				<div class="panel panel-default" style="text-align: center">
+					<div class="panel-heading">
+						<h3 class="panel-title">Dados da minha conta</h3>
+					</div>
+					<div class="panel-body">
+
+						<p>Nome: <h:outputText value="#{minhaContaMB.cliente.nome}" /></p> 
+						<p>Razão Social: <h:outputText value="#{minhaContaMB.cliente.razaoSocial}" /></p>
+						<p>CNPJ: <h:outputText value="#{minhaContaMB.cliente.cnpj}" /></p>
+						<p>Logradouro: <h:outputText value="#{minhaContaMB.cliente.endereco}" /></p>
+						<p>Bairro: <h:outputText value="#{minhaContaMB.cliente.bairro}" /></p>
+						<p>Cidade: <h:outputText value="#{minhaContaMB.cliente.cidade}" /></p>
+						<p>Numero: <h:outputText value="#{minhaContaMB.cliente.numero}" /></p>
+						<p>CEP: <h:outputText value="#{minhaContaMB.cliente.cep}" /></p>
+						<p>UF: <h:outputText value="#{minhaContaMB.cliente.uf}" /></p>
+						<p>Email: <h:outputText value="#{minhaContaMB.cliente.email}" /></p>
+						<p>Telefone: <h:outputText value="#{minhaContaMB.cliente.telefone}" /></p>
+
+					</div>
+				</div>
+			</div>
+			<!-- DIV PAINEL CONTENT -->
+
+		</div>
+	</div>
+
+
+
+	<ui:insert name="menu">
+		<ui:include src="templateInclude.xhtml" />
+	</ui:insert>
+</body>
+</html>
